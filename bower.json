@@ -1,0 +1,9 @@
+{
+  "name": "testng_suite_builder_from_jenkins_failed_tests_page",
+  "private": true,
+  "version": "0.0.0",
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
