@@ -1,6 +1,6 @@
 {
   "name": "__MSG_appName__",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
@@ -11,28 +11,23 @@
   "background": {
     "scripts": [
       "scripts/chromereload.js",
+      "jslibs/jquery.min.js",
       "scripts/background.js"
-    ]
+    ],
+    "persistent": false
   },
   "permissions": [
-    "activeTab",
-    "https://localhost:7001/posui/*",
-    "https://localhost:7002/posui/*",
-    "https://localhost:7003/posui/*",
-    "https://cwposdev.cricketwireless.com/posui/*",
-    "https://cwpostest.cricketwireless.com/posui/*",
-    "storage"
+    "tabs"
   ],
   "content_scripts": [
     {
       "matches": [
-        "https://localhost:7001/posui/*",
-        "https://localhost:7002/posui/*",
-        "https://localhost:7003/posui/*",
-        "https://cwposdev.cricketwireless.com/posui/*",
-        "https://cwpostest.cricketwireless.com/posui/*"
+        "http://*/job/*",
+        "https://*/job/*"
       ],
       "js": [
+        "jslibs/jquery.min.js",
+        "jslibs/FileSaver.js",
         "scripts/contentscript.js"
       ],
       "run_at": "document_end",

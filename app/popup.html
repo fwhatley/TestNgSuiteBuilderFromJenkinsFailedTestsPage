@@ -11,29 +11,20 @@
     <!-- endbuild -->
   </head>
   <body>
-    <div class="container text-center mb-2">
-      <h4>Shortcuts</h4>
-      <div class="row">
-        <div class="col-12 py-2">
-          <p>Add key value pairs into local storage via shortcuts. </p>
-        </div>
+    <div class="container my-2">
+      <h5 class="text-center">TestNg Suite Builder From Jenkins Failed Tests Page</h5>
+      <div class="row pt-2">
+          <p>Chrome Extension that allows you to download TestNG suites in xml format from Jenkins failed tests page so you can re-run failed tests instead of triggering your full suite of tests.
+          </p>
       </div>
       <div class="row">
-        <h6 class="col-6">Shortcut</h6>
-        <h6 class="col-6">Pair</h6>
+        <div class="col-6">There are some failing Selenium tests. <span id="failedTestsNumber"></span></p></div>
+        <div class="col-6"><button id="downloadSeleniumTestsButton" class="btn btn-primary btn-sm">Download</button></div>
       </div>
       <div class="row">
-          <div class="col-6"><span class="badge badge-secondary">Ctrl+0</span></div>
-          <div class="col-6"><small>remove mock</small></div>
+        <div class="col-12"><p><small>For Jenkins ver 2.204.1</small></p></div>
       </div>
-      <div class="row">
-          <div class="col-6"><span class="badge badge-secondary">Ctrl+1</span></div>
-          <div class="col-6"><small>posMock:SIGCAP</small></div>
-      </div>
-      <div class="row">
-        <div class="col-6"><span class="badge badge-secondary">Ctrl+2</span></div>
-        <div class="col-6"><small>posMock:GENERAL.Flow</small></div>
-      </div>
+      
     </div>
 
     <!-- build:js scripts/options-vendor.js -->
@@ -41,8 +32,9 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-    <!-- build:js scripts/options.js -->
-    <script src="scripts/options.js"></script>
+    <!-- build:js scripts/popup.js -->
+    <script src="jsblibs/jquery.min.js"></script>
+    <script src="scripts/popup.js"></script>
     <!-- endbuild -->
   </body>
 </html>
